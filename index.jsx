@@ -4,8 +4,8 @@ import NavBar from "./Components/NavBar"
 import Footer from "./Components/Footer"
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import Home from "./pages/Home"
-import About from "./pages/About"
-import Vans from "./pages/Vans"
+import About from "./Pages/About"
+import Vans from "./Pages/Vans"
 
 
 function App() {
