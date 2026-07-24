@@ -7,6 +7,8 @@ import Home from "./Pages/Home"
 import About from "./Pages/About"
 import Vans from "./Pages/Vans"
 
+import "./server"
+
 
 function App() {
   return (
