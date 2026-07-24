@@ -11,14 +11,18 @@ import Vans from "./Pages/Vans"
 function App() {
   return (
     <BrowserRouter>
-        <NavBar/>
+  <div className="app">
+    <NavBar />
+    <main>
       <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/about" element={<About/>}/>
-          <Route path="/vans" element={<Vans/>}/>      
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/vans" element={<Vans />} />
       </Routes>
-      <Footer/>
-      </BrowserRouter>
+    </main>
+    <Footer />
+  </div>
+</BrowserRouter>
   )
 }
 
