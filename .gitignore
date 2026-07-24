@@ -1,0 +1,5 @@
+# Block local dependency packages
+node_modules/
+
+# Block environment variables and secrets
+.env
