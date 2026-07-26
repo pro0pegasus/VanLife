@@ -1,14 +1,6 @@
 ﻿import React from "react"
 import { useParams, Link } from "react-router-dom"
 
-/*
-    Steps:
-    1. grab useparams function, import and assign
-    2. grab/import data fron vans,jsx using provider ?
-    or we can store our data in a local storage and we grab 
-    from there 
-*/
-
 export default function VanDetails(){
     const params = useParams()
     const [van, setVans] = React.useState(null)
