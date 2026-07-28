@@ -3,3 +3,5 @@ node_modules/
 
 # Block environment variables and secrets
 .env
+
+Details.md

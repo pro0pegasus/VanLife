@@ -4,24 +4,16 @@ import Layout from "./Components/Layout"
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import Home from "./Pages/Home"
 import About from "./Pages/About"
-import Vans from "./Pages/Vans"
-import VanDetails from "./Pages/VanDetails"
+import Vans from "./Pages/Vans/Vans"
+import VanDetails from "./Pages/Vans/VanDetails"
+import Dashboard from "./Pages/Host/Dashboard"
+import Income from "./Pages/Host/Income"
+import Reviews from "./Pages/Host/Reviews"
+import HostLayout from "./Components/HostLayout"
+
 
 import "./server"
 
-/* 
-  Nested routes when they are used, you need to use 
-  outlet( built-in placeholder component). 
-  1. First need to wrap the routes with a parent route 
-  <Rout element={<Layout/>}>
-    <Route path"" element={]/>
-    <Route path"" element={]/>
-    <Route path"" element={]/>
-  </Route>
-  2. then in Layout need to import outlet from-react router-dom
-    and import the components needed.
-    ps: the component or outlet go as order(what you want to render the first)
-*/
 
 function App() {
   return (
@@ -31,9 +23,15 @@ function App() {
       <Routes>
         <Route element={<Layout/>} >
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/vans" element={<Vans />} />
-          <Route path="/vans/:id" element={<VanDetails />} />
+          <Route path="about" element={<About />} />
+          <Route path="vans" element={<Vans />} />
+          <Route path="vans/:id" element={<VanDetails />} />
+          
+          <Route path="host" element={<HostLayout />}>
+            <Route index element={<Dashboard />} />
+            <Route path="income" element={<Income />} />
+            <Route path="reviews" element={<Reviews />} />
+          </Route>
         </Route>
       </Routes>
     </main>
@@ -45,5 +43,3 @@ function App() {
 ReactDOM
   .createRoot(document.getElementById('root'))
   .render(<App />);
-
-

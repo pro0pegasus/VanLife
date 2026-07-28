@@ -2,8 +2,6 @@ import React from "react"
 
 export default function Footer(){
     return(
-        <footer className="footer">
-            <p>© 2026 #VANLIFE</p>
-        </footer>
+        <footer className="footer">© 2026 #VANLIFE</footer>
     )
 }
