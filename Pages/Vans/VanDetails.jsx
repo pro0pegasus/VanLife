@@ -15,7 +15,11 @@ export default function VanDetails(){
 
     return (
         <div className="van-detail-container">
-            <Link className="back-to-vans" to="/vans">Back to all vans</Link>
+            <Link
+                to=".."
+                relative="path"
+                className="back-button"
+            >&larr; <span>Back to all vans</span></Link>
             {van ? (
                 <div className="van-detail">
                     <img src={van.imageUrl} />
