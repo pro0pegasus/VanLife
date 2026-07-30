@@ -1,5 +1,4 @@
 ﻿import React from "react"
-<<<<<<< HEAD
 import { Link, useSearchParams, useLoaderData } from "react-router-dom"
 import { getVans } from "../../api"
 
@@ -27,25 +26,6 @@ export default function Vans() {
                     type: typeFilter
                 }}
             >
-=======
-import { Link } from "react-router-dom"
-
-export default function Vans() {
-    const [vans, setVans] = React.useState([])
-
-    React.useEffect(() => {
-        fetch("/api/vans")
-            .then(res => res.json())
-            .then(data => {
-                setVans(data.vans)
-                localStorage.setItem("vansData", JSON.stringify(data.vans))
-            })
-    }, [])
-
-    const vanElements = vans.map(van => (
-        <div key={van.id} className="van-tile">
-            <Link to={`/vans/${van.id}`}>
->>>>>>> parent of dd4a02a (added filter section)
                 <img src={van.imageUrl} />
                 <div className="van-info">
                     <h3>{van.name}</h3>
@@ -56,7 +36,6 @@ export default function Vans() {
         </div>
     ))
 
-<<<<<<< HEAD
     function handleFilterChange(key, value) {
         setSearchParams(prevParams => {
             if (value === null) {
@@ -106,11 +85,6 @@ export default function Vans() {
                 ) : null}
 
             </div>
-=======
-    return (
-        <div className="van-list-container">
-            <h1>Explore our van options</h1>
->>>>>>> parent of dd4a02a (added filter section)
             <div className="van-list">
                 {vanElements}
             </div>
