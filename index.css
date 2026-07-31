@@ -12,7 +12,12 @@ body,
     font-family: "Inter", sans-serif;
 }
 
+#root {
+    display: flex;
+}
+
 .site-wrapper {
+    flex: 1;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -26,6 +31,18 @@ body,
 
 .site-wrapper > footer {
     flex-shrink: 0;
+}
+
+/* temp solution for stretching page */
+.about-page-container,
+.not-found-container,
+.van-list-container,
+.home-container,
+.login-container,
+.host-van-container,
+.host-reviews {
+    padding-bottom: 100px;
+    min-height:100vh;
 }
 
 a {
@@ -126,14 +143,14 @@ footer {
 /*** HOME PAGE ***/
 .home-container {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)),
-        url("./public/assets/images/home-hero.png") no-repeat center center;
+        url("/assets/images/home-hero.png") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     color: white;
     padding: 45px 23px;
-    flex:1;
+    /* flex:1; */
 }
 
 .home-container h1 {
@@ -167,6 +184,7 @@ footer {
 }
 
 /*** ABOUT PAGE ***/
+
 .about-hero-image {
     max-width: 100%;
 }
